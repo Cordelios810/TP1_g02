@@ -253,7 +253,7 @@ if(Serial.available() > 0){
 
 O bloco de código acima tem como objetivo ler os valores lidos no Serial Monitor, da seguinte forma.
 
-Se uma alteração for detetada nos valores produzidos no serial monitor (sem alteração produz repetidamente o valor "-1"), e iguala o valor introduzido a uma variável "input". Após isso imprime a mesma como forma do utilizador puder verificar o que colocou.
+Se uma alteração for detetada nos valores produzidos no serial monitor (sem alteração produz repetidamente o valor "-1"), e iguala o valor introduzido a uma variável "input". Após isso imprime de forma a que o utilizador possa verificar o que colocou.
 
 ```C++
 //if input is w (waiting) the program does nothing and waits for a valid input
