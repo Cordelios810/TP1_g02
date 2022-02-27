@@ -117,7 +117,7 @@ De forma a poder tornar a ação criada mais simples e repetível esta foi criad
 
 # EX2 Sensor de Temperatura
 ## Circuito
-<img src="https://github.com/Cordelios810/TP1_g02/blob/main/Trabalho%20G02/EX2_Sensor_de_Temperatura/Circuito_EX2.png?raw=true" width="400"/>
+<img src="https://github.com/PedroTorrado/TP1_g02/blob/main/Trabalho%20G02/EX2_Sensor_de_Temperatura/Circuito_EX2.png" width="400"/>
 
 | Componente         | Pin Digital |
 | :---               |    :---:    |
@@ -295,6 +295,11 @@ Estes cálculos têm como objetivo começar por determinar o intervalo entre o q
 ```
 
 Cada if statemente resumidamente faz o o cálculo da distância entre cada intervalo de forma a definir uma nota para cada e proceder a produzir esse som a partir da função tone( ), préviamente explicada.
+
+Estas distâncias estão definidas da mesma forma que no gráfico abaixo.
+
+<img src="https://github.com/PedroTorrado/TP1_g02/blob/main/Trabalho%20G02/EX3_Proximidade/Distance%20Sensor%20Representation.jpg" width="400"/>
+
 
 ```C++
 //if user types D, LED and Buzzer turn off
