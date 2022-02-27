@@ -9,7 +9,7 @@ Foi pedida a realização de 3 exercícios:
 ---
 <strong>EX1 Desempenho CPU</strong>
 
-Utilizando Leds criar uma sequência que liga apenas uma vez cada Led.
+Utilizando Leds criar uma sequência que liga apenas uma vez cada Led, e logo de seguida desliga o circuito.
 
 ---
 <strong>EX2 Sensor de Temperatura</strong>
@@ -223,7 +223,7 @@ O pin definido como SIG é o pin de ligação ao sensor super sónico, e este fu
 
 SIG começa por ser definido como um OUTPUT podendo assim produzir um sinal quando indicado pelo Arduino, e é exatamente isso que procede a fazer, começa por ser definido como LOW, espera 3 milissegundos, é alterado para HIGH, produzindo assim um sinal e continuando a produzir o mesmo durante 5 milissegundos e voltando a mudar para LOW, parando de produzir o mesmo sinal.
 
-Após isso este é alterado de novo para INPUT de forma a poder receber o sinal, o que faz a partir da função "*pulseIn( )*" interpretando também o tempo que demorou o sinal e dando-lhe um valor analógico, que é alterado para uma distância em centímetros no final da função "*superSonicSensor( )*" este (a distância em centímetros) é o valor valor devolvido pela função.
+Após isso este é alterado de novo para INPUT de forma a poder receber o sinal, o que faz a partir da função "*pulseIn( )*" interpretando também o tempo que demorou o sinal e dando-lhe um valor analógico, que é alterado para uma distância em centímetros no final da função "*superSonicSensor( )*" este (a distância em centímetros) é o valor devolvido pela função.
 
 Continuando para a função "*Loop*":
 
