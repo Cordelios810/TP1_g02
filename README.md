@@ -2,7 +2,7 @@
 ---
 ## Introdução
 
-Este trabalho tem como onjetivo, aprofundar o nosso conhecimento em programação em C++ e em Arduino.
+Este trabalho tem como objetivo, aprofundar o nosso conhecimento em programação em C++ e em Arduino.
 
 Foi pedida a realização de 3 exercícios:
 
@@ -14,12 +14,12 @@ Utilizando Leds criar uma sequência que liga apenas uma vez cada Led.
 ---
 <strong>EX2 Sensor de Temperatura</strong>
 
-Demonstrar o funcionamento de um sensor de temperatura (TMP36), utilizando o serial monitor para apresntar os resultados e Leds para demonstrar se o valor se encontra abaixo ou acima de certo limite.
+Demonstrar o funcionamento de um sensor de temperatura (TMP36), utilizando o serial monitor para apresentar os resultados e Leds para demonstrar se o valor se encontra abaixo ou acima de certo limite.
 
 ---
 <strong>EX3 Proximidade</strong>
 
-Utilizando um sensor de proximidade (Sensor Ultrasonico) e um Piezo Buzzer, demonstrar o seu funcionamento, utilizando o serial monitor para introduzir os comandos necessários.
+Utilizando um sensor de proximidade (Sensor Ultrassónico) e um Piezo Buzzer, demonstrar o seu funcionamento, utilizando o serial monitor para introduzir os comandos necessários.
 
 ---
 
@@ -49,7 +49,7 @@ Utilizando um sensor de proximidade (Sensor Ultrasonico) e um Piezo Buzzer, demo
 #define led_red_2 8
 ```
 
-Definir cada pin para o seu respetivo componente de forma a que mais tarde possamos referir aos componentes diretamente e não apenas aos pin que estão connectados, como no exemplo:
+Definir cada pin para o seu respetivo componente de forma a que mais tarde possamos referir aos componentes diretamente e não apenas aos pin que estão conectados, como no exemplo:
 
 ```C++
 digitalWrite(led_green_1, HIGH);
@@ -63,7 +63,7 @@ E muito resumidamente o que qualquer uma dessas duas linhas de código faz, é a
 digitalWrite(led_green_1, HIGH);
 ```
 
-Define o pin em questão (neste caso led_green_1 e respetivamente o pin 13), como "*HIGH*", ou seja como ligado (5V).
+Define o pin em questão (neste caso led_green_1 e respetivamente o pin 13), como "*HIGH*", ou seja, como ligado (5V).
 
 ```C++
 digitalWrite(led_green_1, LOW);
@@ -109,9 +109,9 @@ O bloco acima liga cada um dos pins com um segundo de pausa entre cada pela segu
 6. Led Vermelho 2
 
 
-Sendo que tudo o que a função delay() faz é parar o programa durante x tempo em milisegundos, é esta função que faz com que haja um delay entre cada pin a ser ligado.
+Sendo que tudo o que a função delay() faz é parar o programa durante x tempo em milissegundos, é esta função que faz com que haja um delay entre cada pin a ser ligado.
 
-De forma a poder tornar a ação criada mais simples e repetível esta foi criada dentro de uma nova função "*SEQ( )*" e de forma a que esta não se repita e apenas execute a ação pretendida uma vez, esta foi colocada dentro da função "*setup( )*".
+De forma a poder tornar a ação criada mais simples e acessível esta foi criada dentro de uma nova função "*SEQ( )*" e de forma a que esta não se repita e apenas execute a ação pretendida uma vez, esta foi colocada dentro da função "*setup( )*".
 
 ---
 
@@ -133,7 +133,7 @@ De forma a poder tornar a ação criada mais simples e repetível esta foi criad
 float tmp = analogRead(TMP);
 ```
 
-O valor lido pelo pin A1, é um valor analógico que pode variar entre vários valores (0 a 1023, 10 bits) conforme a tensão aplicada no mesmo. Contudo o que nós pretendemos obter do sensor de temperatura não é este valor mas sim a temperatura em graus celsius e para isso utiliza-se as seguintes equações:
+O valor lido pelo pin A1, é um valor analógico que pode variar entre vários valores (0 a 1023, 10 bits) conforme a tensão aplicada no mesmo. Contudo o que nós pretendemos obter do sensor de temperatura não é este valor mas sim a temperatura em graus Celsius e para isso utiliza-se as seguintes equações:
 
 ```C++
 tmp = (tmp/1024)*5000;
@@ -144,7 +144,7 @@ Sem fazer esta alteração nos resultados os valores seriam algo como 358.00 qua
 
 Após ler o resultado da temperatura utilizamos o mesmo de forma a que se possam criar as reações pretendidas do sistema conforme as condições do mesmo, sendo essas:
 
-Se a temperatura for acima de 40ºC:
+Se a temperatura for acima de 40 °C:
 
 ```C++
 if(tmp>40){
@@ -174,9 +174,9 @@ else{
 
 Se não:
 
-1. Ligar o Led Verde
-2. Ligar o Led Red
-3. Desligar o Piezo Buzzer
+1. Ligar o Led Verde;
+2. Ligar o Led Vermelho;
+3. Desligar o Piezo Buzzer;
 
 ---
 
@@ -221,7 +221,7 @@ int superSonicSensor(){
 
 O pin definido como SIG é o pin de ligação ao sensor super sónico, e este funciona enviando um sinal e verificando quanto tempo demora o mesmo a ser recebido de volta. Assim, no bloco de código acima podemos verificar essa mesma ação.
 
-SIG começa por ser definido como um OUTPUT podendo assim produzir um sinal quando indicado pelo Arduino, e é exatamente isso que procede a fazer, começa por ser definido como LOW, espera 3 milisegundos, é alterado para HIGH, produzindo assim um sinal e continuando a produzir o mesmo durante 5 milisegundos e voltando a mudar para LOW, parando de produzir o mesmo sinal.
+SIG começa por ser definido como um OUTPUT podendo assim produzir um sinal quando indicado pelo Arduino, e é exatamente isso que procede a fazer, começa por ser definido como LOW, espera 3 milissegundos, é alterado para HIGH, produzindo assim um sinal e continuando a produzir o mesmo durante 5 milissegundos e voltando a mudar para LOW, parando de produzir o mesmo sinal.
 
 Após isso este é alterado de novo para INPUT de forma a poder receber o sinal, o que faz a partir da função "*pulseIn( )*" interpretando também o tempo que demorou o sinal e dando-lhe um valor analógico, que é alterado para uma distância em centímetros no final da função "*superSonicSensor( )*" este (a distância em centímetros) é o valor valor devolvido pela função.
 
@@ -229,7 +229,7 @@ Continuando para a função "*Loop*":
 
 De forma a se poder produzir som a partir de um Buzzer de forma controlada, pode utilizar-se a seguinte função : "*tone(PinOutput,Frequência)*"
 
-De forma a utilizar-mos o buzzer de forma controlada e ter-mos resultados um pouco mais apreciáveis do que frequências aleatórias, decidi-mos utilizar notas músicais, mais especificamente as notas princípais de uma oitava (excluindo sustenidos e bemois), da 4ª oitava, incluindo ainda o Dó da 5ª oitava.
+De forma a utilizar-mos o buzzer de forma controlada e ter-mos resultados um pouco mais apreciáveis do que frequências aleatórias, decidi-mos utilizar notas musicais, mais especificamente as notas principais de uma oitava (excluindo sustenidos e bemóis), da 4ª oitava, incluindo ainda o Dó da 5ª oitava.
 
 ```C++
   int C4 = 262; //Dó 4
@@ -271,7 +271,7 @@ else if(input == 'R' or input == 'r'){
 
 ```
 
-Se o valor de input for "R" ou "r" o programa liga o Led vermelhor e procede a utilzar a função "*superSonicSensor( )*" para obter o resultado da distância e iguala-lo a uma variavél (distance), após isso são feitos alguns cálculos.
+Se o valor de input for "R" ou "r" o programa liga o Led vermelho e procede a utilizar a função "*superSonicSensor( )*" para obter o resultado da distância e iguala-lo a uma variável (distance), após isso são feitos alguns cálculos.
 
 ```C++
   float max_distance_value = 330.71;
@@ -280,7 +280,7 @@ Se o valor de input for "R" ou "r" o programa liga o Led vermelhor e procede a u
   float interval = range_distance_value/8; //41.05125
 ```
 
-Estes cálculos têm como objetivo começar por determinar o intervalo entre o qual o sensor pode medir distância e utilizando esse valor criar 8 intervalos entre os quais podem ser definidas as notas antes específicadas (O valor entre intervalo deve ser aproximadamente 41).
+Estes cálculos têm como objetivo começar por determinar o intervalo entre o qual o sensor pode medir distância e utilizando esse valor criar 8 intervalos entre os quais podem ser definidas as notas antes especificadas (O valor entre intervalo deve ser aproximadamente 41).
 
 ```C++
   if(distance < min_distance_value + 1 * interval)){tone(Buzzer, C5);}
@@ -293,8 +293,7 @@ Estes cálculos têm como objetivo começar por determinar o intervalo entre o q
   else{tone(Buzzer, C4);}
 }
 ```
-
-Cada if statemente resumidamente faz o o cálculo da distância entre cada intervalo de forma a definir uma nota para cada e proceder a produzir esse som a partir da função tone( ), préviamente explicada.
+Cada if statemente resumidamente faz o o cálculo da distância entre cada intervalo de forma a definir uma nota para cada e proceder a produzir esse som a partir da função tone( ), prévia mente explicada.
 
 Estas distâncias estão definidas da mesma forma que no gráfico abaixo.
 
@@ -332,9 +331,9 @@ Este else refere-se ao if relacionado ao input de caracteres, sendo assim, se o 
 | LED Vermelho        |      13     |
 | Sensor PIR          |      A5     |
 
-O objectivo deste exercício é definir distância através de um sensor infravermelho, visto que o sensor PIR não consegue calcular distancias, pois este apenas detecta movimentos resolvemos realizar um circuito onde quando o sensor infravermelho detecta movimento um LED vermelho liga.
+O objetivo deste exercício é definir distância através de um sensor infravermelho, visto que o sensor PIR não consegue calcular distancias, pois, este apenas deteta movimentos resolvemos realizar um circuito onde quando o sensor infravermelho deteta movimento um LED vermelho liga.
 
-Criar uma variavel "*val*" e defenir o valor desta variavel para 0.
+Criar uma variável "*val*" e definir o valor desta variável para 0.
 
 ```C++
 int val = 0;
