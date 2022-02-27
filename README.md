@@ -260,7 +260,7 @@ Se uma alteração for detetada nos valores produzidos no serial monitor (sem al
 if(input == 'w'){}
 ```
 
-Se o input for w (como é definido no inicio do programa e também assim o seu valor default), este não faz nada, daí o if statement se encontrar vazio, este é utilizado apenas como forma de esperar pela introdução de um dos valores válidos como "R" ou "D".
+Se o input for "w" (como é definido no inicio do programa e também assim o seu valor default), este não faz nada, daí o if statement se encontrar vazio, este é utilizado apenas como forma de esperar pela introdução de um dos valores válidos como "R" ou "D".
 
 ```C++
 else if(input == 'R' or input == 'r'){
@@ -293,7 +293,7 @@ Estes cálculos têm como objetivo começar por determinar o intervalo entre o q
   else{tone(Buzzer, C4);}
 }
 ```
-Cada if statemente resumidamente faz o o cálculo da distância entre cada intervalo de forma a definir uma nota para cada e proceder a produzir esse som a partir da função tone( ), prévia mente explicada.
+Cada if statemente resumidamente faz o cálculo da distância entre cada intervalo de forma a definir uma nota para cada e procede  a produzir esse som a partir da função tone( ), previamente explicada.
 
 Estas distâncias estão definidas da mesma forma que no gráfico abaixo.
 
