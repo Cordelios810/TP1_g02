@@ -331,7 +331,7 @@ Este else refere-se ao if relacionado ao input de caracteres, sendo assim, se o 
 | LED Vermelho        |      13     |
 | Sensor PIR          |      A5     |
 
-O objetivo deste exercício é definir distância através de um sensor infravermelho, visto que o sensor PIR não consegue calcular distancias, pois, este apenas deteta movimentos resolvemos realizar um circuito onde quando o sensor infravermelho deteta movimento um LED vermelho liga.
+O objetivo deste exercício é definir distância através de um sensor infravermelho, visto que o sensor PIR não consegue calcular distancias, pois, este apenas deteta movimentos, então resolvemos assim realizar um circuito onde quando o sensor infravermelho deteta movimento um LED vermelho liga.
 
 Criar uma variável "*val*" e definir o valor desta variável para 0.
 
