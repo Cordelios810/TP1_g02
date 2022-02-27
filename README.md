@@ -160,7 +160,7 @@ if(tmp>40){
 ```
 
 1. Ligar o Led Vermelho;
-2. Desligar o Pin Verde;
+2. Desligar o Led Verde;
 3. Apresentar a temperatura no Serial Monitor (Utilizado a partir do Arduino IDE ou equivalente);
 4. Liga o Piezo Buzzer durante dois segundos e volta a desligá-lo.
 
